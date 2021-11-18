@@ -8,7 +8,7 @@ export default function Home(props) {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            {props.title}
+            <b>{props.title}</b>
           </Link>
           <button
             className="navbar-toggler"
@@ -25,10 +25,10 @@ export default function Home(props) {
             {" "}
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li className="nav-item">
-              <i class="fa-thin fa-house"></i>            
-              <Link className="nav-link active" aria-current="page" to="/">
+                <i class="fa-thin fa-house"></i>
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-              </Link>
+                </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" to="/about">
