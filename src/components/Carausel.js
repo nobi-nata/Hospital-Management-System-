@@ -1,91 +1,56 @@
 import React from "react";
+import "./Carausel.css";
 
-export default function Carausel() {
+export default function carausel() {
   return (
-    <div
-      className="carousel slide"
-      id="carouselExampleIndicators"
-      data-bs-ride="carousel"
-      my-3
-    >
+    <div>
       <br />
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
       <div
         id="carouselExampleControls"
-        className="carousel slide"
-        data-bs-ride="carousel"
+        class="carousel slide"
+        data-ride="carousel"
       >
-        <div className="carousel-inner">
-          <div className="carousel-item active rounded-sm">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
             <img
-              src="http://bestdentalclinicinbangalore.com/wp-content/uploads/2012/07/Dental-Clinic-in-Bangalore-Quintessence-Dental-Solutions.jpg"
-              className="d-block w-100"
-              style={{ height: "600px" }}
+              src="https://cloudfront.omsphoto.com/wp-content/uploads/2019/10/GHA_XRAY_8198.jpg"
+              class="d-block w-100"
               alt="..."
             />
           </div>
-          <div className="carousel-item rounded-sm">
+          <div class="carousel-item">
             <img
-              src="https://www.ghurkitrust.org.pk/wp-content/uploads/2018/06/physiotherapy.jpg"
-              className="d-block w-100"
-              style={{ height: "600px" }}
+              src="https://cloudfront.omsphoto.com/wp-content/uploads/2019/10/OMS-photo-mlburn-lab-workplace-012-1050x700.jpg"
+              class="d-block w-100"
               alt="..."
             />
           </div>
-          <div className="carousel-item rounded-sm">
+          <div class="carousel-item">
             <img
-              src="https://www.healthcareitnews.com/sites/hitn/files/052119%20University%20Operating%20Room%20712.jpg"
-              className="d-block w-100"
-              style={{ height: "600px" }}
+              src="https://cloudfront.omsphoto.com/wp-content/uploads/2019/10/OMS-photo-health-medical-photography-016-1050x700.jpg"
+              class="d-block w-100"
               alt="..."
             />
           </div>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev"
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="prev"
         >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          {/* <span className="visually-hidden">Previous</span> */}
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="next"
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="next"
         >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          {/* <span className="visually-hidden">Next</span> */}
-        </button>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
       <br />
     </div>

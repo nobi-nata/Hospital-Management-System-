@@ -14,6 +14,9 @@ import {
 } from "react-router-dom";
 import About from "./components/About";
 import Connect from "./components/Connect";
+import Nurse from "./components/Nurse";
+//import Doctor from "./components/Doctor";
+import Laboratory from "./components/Laboratory";
 
 function App() {
   return (
@@ -27,6 +30,13 @@ function App() {
           <Route path="/connect">
             <Connect />
           </Route>
+          <Route path="/nurse">
+            <Nurse />
+          </Route>
+
+          <Route path="/lab">
+            <Laboratory />
+          </Route>
           <Route path="/">
             <div className="container" my-3>
               <Carausel />
@@ -34,7 +44,6 @@ function App() {
             <div className="container" my-5>
               <Details />
             </div>
-
             <div className="container" my-3>
               <Card />
             </div>
