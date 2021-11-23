@@ -25,11 +25,11 @@ export default function Home(props) {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="d-flex flex-row-reverse bd-highlight mx-3">
+          <div className="d-flex flex-row-reverse bd-highlight mx-3">
             {" "}
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li className="nav-item">
-                <i class="fa-thin fa-house"></i>
+                <i className="fa-thin fa-house"></i>
                 <Link
                   className={`nav-link ${
                     location.pathname === "/" ? "active" : ""
@@ -37,7 +37,7 @@ export default function Home(props) {
                   aria-current="page"
                   to="/"
                 >
-                  <i class="fas fa-home"> Home</i>
+                  <i className="fas fa-home"> Home</i>
                 </Link>
               </li>
               <li className="nav-item">
@@ -48,45 +48,49 @@ export default function Home(props) {
                   to="/about"
                 >
                   {/* {props.aboutText} */}
-                  <i class="fas fa-plus-square"> About</i>{" "}
+                  <i className="fas fa-plus-square"> About</i>{" "}
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   className={`nav-link ${
-                    location.pathname === "/nurse" ? "active" : ""
+                    location.pathname === "/connect" ? "active" : ""
                   }`}
-                  to="/nurse"
+                  to="/connect"
                 >
-                  <i class="fas fa-envelope"> Connect</i>{" "}
+                  <i className="fas fa-envelope"> Connect</i>
                   {/* {props.aboutText1} */}
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   className={`nav-link ${
-                    location.pathname === "/nurse" ? "active" : ""
+                    location.pathname === "/login" ? "active" : ""
                   }`}
-                  to="/nurse"
+                  to="/login"
                 >
-                  <i class="fas fa-sign-in-alt"> Login</i>
+                  <i className="fas fa-sign-in-alt"> Login</i>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   className={`nav-link ${
-                    location.pathname === "/nurse" ? "active" : ""
+                    location.pathname === "/signup" ? "active" : ""
                   }`}
-                  to="/nurse"
+                  to="/signup"
                 >
-                  <i class="fas fa-image">IMAGE</i> {/* {props.aboutText1} */}
+                  <i className="fas fa-user-plus"> Signup</i>
                 </Link>
               </li>
             </ul>
             {/* <form className="d-flex">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button className="btn btn-outline-success" type="submit">Search</button>
-        </form> */}
+              <Link className="btn btn-primary" to="/login" role="button">
+                Login
+              </Link>
+              <Link className="btn btn-primary" to="/singup" role="button">
+                Signup
+              </Link>
+            </form> */}
           </div>
         </div>
       </nav>

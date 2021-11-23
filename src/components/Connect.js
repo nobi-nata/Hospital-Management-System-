@@ -21,9 +21,9 @@ export default function Connect() {
               Vijayanagar 1st cross, M G Road , Davanagere, Karnataka - 567893
             </p>
             <p>
-              Email : <a href="#">quickheal@gmail.com</a>
+              Email : <a href="/">quickheal@gmail.com</a>
             </p>
-            Contact : <a href="#">0283-943423</a>
+            Contact : <a href="/">0283-943423</a>
           </div>
         </div>
 
@@ -41,9 +41,9 @@ export default function Connect() {
             </h5>
             <p>Vijayanagar 1st cross, M G Road , Mysore, Karnataka - 567893</p>
             <p>
-              Email : <a href="#">quickheal@gmail.com</a>
+              Email : <a href="/">quickheal@gmail.com</a>
             </p>
-            Contact : <a href="#">0283-943423</a>
+            Contact : <a href="/">0283-943423</a>
           </div>
         </div>
 
@@ -63,9 +63,9 @@ export default function Connect() {
               Tilakwadi 1st cross, Congress Road , Belgaum, Karnataka - 590033
             </p>
             <p>
-              Email : <a href="#">quickheal@gmail.com</a>
+              Email : <a href="/">quickheal@gmail.com</a>
             </p>
-            Contact : <a href="#">0283-943423</a>
+            Contact : <a href="/">0283-943423</a>
           </div>
         </div>
       </div>

@@ -18,15 +18,16 @@ export default function Card() {
           <CardItem
             title="Laboratory"
             link1="/lab"
-            desc="Quickheal Health maintains a full-service laboratory performing clinical analysis on blood, tissue and other body fluids."
+            desc="Quickheal Health maintains a full-service laboratory performing clinical analysis on blood, tissue and other body fluids.                          "
             link="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg?size=338&ext=jpg"
           />
         </div>
         <div className="col-md-4">
           <CardItem
-            title="Nurse"
-            link1="/"
-            desc="Quickheal Health maintains a full-service laboratory performing clinical analysis on blood, tissue and other body fluids."
+            title="Pharmacy"
+            link1="/phar"
+            desc="Quickheal Hospital Pharmacy is well-stocked with any medicines
+          you may need.We are your one-stop shop for all of your pharmacy and medical needs."
             link="https://i.pinimg.com/736x/e0/fe/01/e0fe01ba2d69e6b7fbbca832737a20c6.jpg"
           />
         </div>

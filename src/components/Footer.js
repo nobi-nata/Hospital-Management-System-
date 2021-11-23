@@ -31,7 +31,7 @@ export default function Footer() {
               </a>
             </li>
             <li style={{ listStyle: "none" }}>
-              <a style={{ textDecoration: "none" }} href="">
+              <a style={{ textDecoration: "none" }} href="/">
                 Login
               </a>
             </li>
@@ -58,12 +58,12 @@ export default function Footer() {
               </a>
             </li>
             <li style={{ listStyle: "none" }}>
-              <a style={{ textDecoration: "none" }} href="">
+              <a style={{ textDecoration: "none" }} href="/">
                 <i class="fab fa-twitter-square"> Twitter</i>
               </a>
             </li>
             <li style={{ listStyle: "none" }}>
-              <a style={{ textDecoration: "none" }} href="">
+              <a style={{ textDecoration: "none" }} href="/">
                 <i class="fab fa-linkedin"> LinkedIn</i>
               </a>
             </li>
