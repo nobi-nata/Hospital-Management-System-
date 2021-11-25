@@ -1,5 +1,7 @@
+import React from "react";
 // import logo from './logo.svg';
 import "./App.css";
+
 import Carausel from "./components/Carausel";
 // import Carausel1 from './components/Carausel1';
 import Card from "./components/Card";
@@ -60,7 +62,7 @@ function App() {
               </div>
             </Route>
           </Switch>
-          <div style={{ backgroundColor: "whitesmoke" }}>
+          <div style={{ backgroundColor: "black" }}>
             <Footer />
           </div>
         </Router>

@@ -1,19 +1,22 @@
 import React from "react";
 
 export default function Footer() {
+  var myStyle = {
+    color: "white",
+  };
   return (
     <div className="container">
       <br />
       <div className="row">
         <div className="col-md-4">
-          <h4>QuickHeal</h4>
-          <p>&nbsp;&nbsp;Get Well Soon Here</p>
+          <h4 style={myStyle}>QuickHeal</h4>
+          <p style={myStyle}>&nbsp;&nbsp;Get Well Soon Here</p>
           <br />
           <br />
         </div>
 
         <div className="col-md-4">
-          <h4>Our Services</h4>
+          <h4 style={myStyle}>Our Services</h4>
           <dl>
             <li style={{ listStyle: "none" }}>
               <a style={{ textDecoration: "none" }} href="/">
@@ -39,7 +42,7 @@ export default function Footer() {
           <br />
         </div>
         <div className="col-md-4">
-          <h4>Follow Us</h4>
+          <h4 style={myStyle}>Follow Us</h4>
           <dl>
             <li style={{ listStyle: "none" }}>
               <a
