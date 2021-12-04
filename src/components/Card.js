@@ -27,7 +27,7 @@ export default function Card() {
             title="Pharmacy"
             link1="/phar"
             desc="Quickheal Hospital Pharmacy is well-stocked with any medicines
-          you may need.We are your one-stop shop for all of your pharmacy and medical needs."
+          you may need.One-stop shop for all pharmacy and medical needs."
             link="https://i.pinimg.com/736x/e0/fe/01/e0fe01ba2d69e6b7fbbca832737a20c6.jpg"
           />
         </div>

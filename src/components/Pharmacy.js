@@ -1,5 +1,5 @@
 import React from "react";
-import "./Pharmacy.css"
+import "./Pharmacy.css";
 export default function Pharmacy() {
   var myStyle = {
     color: "red",
@@ -7,6 +7,7 @@ export default function Pharmacy() {
   return (
     <div className="container my-3">
       <h1 id="phar-h1">PHARMACY</h1>
+      <br />
       <div>
         The Pharmacy at Quickheal Hospital is well-stocked with any medicines
         you may need. With a simple principle of offering patients maximum
@@ -21,8 +22,11 @@ export default function Pharmacy() {
         best Pharmacy in Bangalore.
         <br />
         <br />
-        <h3 id="phar-h3" style={{ textAlign: "center" }}>HIGHLIGHTS</h3>
-        <div>
+        <h3 id="phar-h3" style={{ textAlign: "center" }}>
+          HIGHLIGHTS
+        </h3>
+        <br />
+        <div id="pharcard-div" className="pharcard-div1">
           <div style={myStyle} className="ms-5 ps-5">
             <i
               style={{ fontSize: "200%" }}
@@ -43,8 +47,33 @@ export default function Pharmacy() {
             <li style={{ listStyle: "none" }}>Private Consultation Room</li>
           </dl>
         </div>
-        <div></div>
-        <div></div>
+        <div id="pharcard-div" className="pharcard-div2">
+          <div style={myStyle} className="ms-4 ps-5">
+            <i style={{ fontSize: "200%" }} class="fas fa-archive"></i>
+          </div>
+          <h4 style={myStyle}>Over The Counter</h4>
+          <dl className="mx-2">
+            <li style={{ listStyle: "none" }}></li>
+            <li style={{ listStyle: "none" }}>Cold and Allergy Medication</li>
+            <li style={{ listStyle: "none" }}>Vitamins</li>
+            <li style={{ listStyle: "none" }}>Oral Health products</li>
+            <li style={{ listStyle: "none" }}>First Aid items</li>
+            <li style={{ listStyle: "none" }}>Hosiery and socks</li>
+            <li style={{ listStyle: "none" }}>Feminine Hygiene products</li>
+          </dl>
+        </div>
+        <div id="pharcard-div" className="pharcard-div3">
+          <div style={myStyle} className="ps-2 ms-5">
+            <i style={{ fontSize: "200%" }} class="fas fa-gift"></i>
+          </div>
+          <h4 style={myStyle}>Cards & Gifts</h4>
+          <dl className="mx-2">
+            <li style={{ listStyle: "none" }}>Cosmetics</li>
+            <li style={{ listStyle: "none" }}>Infant Care</li>
+            <li style={{ listStyle: "none" }}>Hair Care</li>
+            <li style={{ listStyle: "none" }}>Shower and Bath Items</li>
+          </dl>
+        </div>
       </div>
     </div>
   );

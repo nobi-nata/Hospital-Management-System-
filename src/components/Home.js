@@ -12,7 +12,10 @@ export default function Home(props) {
       <nav className="navbar  navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            <b>{props.title}</b>
+            <b>
+              <i class="fab fa-quinscape"></i>
+              {props.title}
+            </b>
           </Link>
           <button
             className="navbar-toggler"

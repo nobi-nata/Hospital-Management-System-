@@ -17,19 +17,24 @@ import {
 import About from "./components/About";
 import Connect from "./components/Connect";
 //import Nurse from "./components/Nurse";
-// import Doctor from "./components/Doctor";
+import Doctor from "./components/Doctor";
 import Laboratory from "./components/Laboratory";
 import Pharmacy from "./components/Pharmacy";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import NoteState from "./context/notes/NoteState";
+import ScrollToTop from "./components/scrollToTop";
+import Buttons from "./components/Buttons";
+import Admin from "./components/Admin";
+//import Login from "./components/Login (2)";
 
 function App() {
   return (
     <>
       <NoteState>
         <Router>
-          <Home title="QuickHeal" />
+          <ScrollToTop />
+          <Home title="  QuickHeal" />
           <Switch>
             <Route path="/about">
               <About />
@@ -38,10 +43,26 @@ function App() {
               <Connect />
             </Route>
             <Route path="/login">
-              <Login />
+              <Buttons />
             </Route>
             <Route path="/signup">
               <Signup />
+            </Route>
+
+            <Route path="/login-admin">
+              <Login name="Admin" />
+            </Route>
+            <Route path="/login-doctor">
+              <Login name="Doctor" />
+            </Route>
+            <Route path="/login-nurse">
+              <Login name="Nurse" />
+            </Route>
+            <Route path="/login-recep">
+              <Login name="Receptionist" />
+            </Route>
+            <Route path="/login-patient">
+              <Login name="Patient" />
             </Route>
 
             <Route path="/lab">

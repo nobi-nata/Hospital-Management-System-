@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 
-export default function Login() {
+export default function Login(props) {
   let history = useHistory();
 
   const [credentials, setCredentials] = useState({ email: "", password: "" });
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -40,8 +40,9 @@ export default function Login() {
     <div className="container my-5 mx-5">
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
+          <h1 className="text-center my-3"> {props.name} Login </h1>
           <label htmlFor="email" className="form-label">
-            Email address
+            Username
           </label>
           <input
             type="email"

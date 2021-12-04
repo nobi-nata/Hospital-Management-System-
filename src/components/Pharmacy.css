@@ -1,6 +1,16 @@
-#phar-h1{
-    text-decoration: overline brown;
+#phar-h1 {
+  text-decoration: overline brown;
 }
 #phar-h3 {
-    text-decoration: underline green;
-  }
+  text-decoration: underline green;
+}
+
+#pharcard-div {
+  display: inline-block;
+}
+.pharcard-div1 {
+  padding-right: 5%;
+}
+.pharcard-div2 {
+  padding-right: 14%;
+}
