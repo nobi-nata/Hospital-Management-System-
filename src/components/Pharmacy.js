@@ -48,7 +48,7 @@ export default function Pharmacy() {
           </dl>
         </div>
         <div id="pharcard-div" className="pharcard-div2">
-          <div style={myStyle} className="ms-4 ps-5">
+          <div style={myStyle} className="ms-5 ps-5">
             <i style={{ fontSize: "200%" }} class="fas fa-archive"></i>
           </div>
           <h4 style={myStyle}>Over The Counter</h4>
@@ -63,11 +63,11 @@ export default function Pharmacy() {
           </dl>
         </div>
         <div id="pharcard-div" className="pharcard-div3">
-          <div style={myStyle} className="ps-2 ms-5">
+          <div style={myStyle} className="ps-5 ms-5">
             <i style={{ fontSize: "200%" }} class="fas fa-gift"></i>
           </div>
           <h4 style={myStyle}>Cards & Gifts</h4>
-          <dl className="mx-2">
+          <dl id="dl-3" className="mx-2">
             <li style={{ listStyle: "none" }}>Cosmetics</li>
             <li style={{ listStyle: "none" }}>Infant Care</li>
             <li style={{ listStyle: "none" }}>Hair Care</li>
