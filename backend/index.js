@@ -12,6 +12,7 @@ app.use(express.json());
 // Available Routes
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/notes", require("./routes/notes"));
+app.use("/api/notes1", require("./routes/notes1"));
 
 app.listen(port, () => {
   console.log(`Quickheal backend listening at http://localhost:${port}`);

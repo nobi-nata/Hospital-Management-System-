@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 export default function Buttons() {
   // function admin() {
   //     var x=document.getElementById("Admin");
@@ -12,8 +11,13 @@ export default function Buttons() {
     <div>
       <div
         className="container my-5 "
-        style={{ paddingLeft: "25%", paddingTop: "10%", paddingBottom: "10%" }}
+        style={{
+          textAlign: "center",
+          paddingTop: "10%",
+          paddingBottom: "10%",
+        }}
       >
+        {/* <img  src="https://sgmh.org/wp-content/uploads/2018/02/sgmh-emergency-services3000x2000-1260x840.jpeg" alt="..."/> */}
         <button
           type="button"
           className="btn btn-outline-secondary my-3"

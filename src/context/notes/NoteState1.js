@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import NoteContext from "./noteContext";
+import NoteContext from "./noteContext1";
 
-const NoteState = (props) => {
+const NoteState1 = (props) => {
   const host = "http://localhost:5000";
   const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial);
 
   //get all the notes
-  const getNotes = async () => {
-    const response = await fetch(`${host}/api/notes/fetchallnotes`, {
+  const getNotes1 = async () => {
+    const response = await fetch(`${host}/api/notes1/fetchallnotes`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -20,15 +20,15 @@ const NoteState = (props) => {
     setNotes(json);
   };
   //add a note
-  const addNote = async (
+  const addNote1 = async (
     gender,
     age,
     phonenumber,
     address,
     appdate,
-    department
+    description
   ) => {
-    const response = await fetch(`${host}/api/notes/addnote`, {
+    const response = await fetch(`${host}/api/notes1/addnote`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const NoteState = (props) => {
         phonenumber,
         address,
         appdate,
-        department,
+        description,
       }),
     });
 
@@ -50,8 +50,8 @@ const NoteState = (props) => {
   };
 
   //delete a note
-  const deleteNote = async (id) => {
-    const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
+  const deleteNote1 = async (id) => {
+    const response = await fetch(`${host}/api/notes1/deletenote/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -66,16 +66,16 @@ const NoteState = (props) => {
   };
 
   //edit a note
-  const editNote = async (
+  const editNote1 = async (
     id,
     gender,
     age,
     phonenumber,
     address,
     appdate,
-    department
+    description
   ) => {
-    const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
+    const response = await fetch(`${host}/api/notes1/updatenote/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -87,7 +87,7 @@ const NoteState = (props) => {
         phonenumber,
         address,
         appdate,
-        department,
+        description,
       }),
     });
     const json = await response.json();
@@ -100,7 +100,7 @@ const NoteState = (props) => {
         newNotes[index].phonenumber = phonenumber;
         newNotes[index].address = address;
         newNotes[index].appdate = appdate;
-        newNotes[index].department = department;
+        newNotes[index].description = description;
         break;
       }
     }
@@ -108,11 +108,11 @@ const NoteState = (props) => {
   };
   return (
     <NoteContext.Provider
-      value={{ notes, addNote, deleteNote, editNote, getNotes }}
+      value={{ notes, addNote1, deleteNote1, editNote1, getNotes1 }}
     >
       {props.children}
     </NoteContext.Provider>
   );
 };
 
-export default NoteState;
+export default NoteState1;

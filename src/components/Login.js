@@ -4,7 +4,11 @@ import { useHistory } from "react-router";
 export default function Login(props) {
   let history = useHistory();
 
-  const [credentials, setCredentials] = useState({ email: "", password: "" });
+  const [credentials, setCredentials] = useState({
+    email: "",
+    password: "",
+    name: "",
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,6 +19,7 @@ export default function Login(props) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        name: credentials.name,
         email: credentials.email,
         password: credentials.password,
       }),
@@ -24,9 +29,10 @@ export default function Login(props) {
     if (json.success) {
       //save the auth token and redirect
       localStorage.setItem("token", json.authtoken);
-      history.push("/");
+      history.push(`/${props.name}`);
+      props.showAlert("LoggedIn Successfully ", "success");
     } else {
-      alert("Invalid Credentials");
+      props.showAlert("Invalid Credentials", "danger");
     }
   };
 
@@ -53,9 +59,6 @@ export default function Login(props) {
             aria-describedby="emailHelp"
             onChange={onChange}
           />
-          <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
-          </div>
         </div>
         <div className="mb-3">
           <label htmlFor="password" className="form-label">

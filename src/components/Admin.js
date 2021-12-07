@@ -1,16 +1,48 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 export default function Admin() {
-    return (
-        <div>
-<div className="d-grid gap-2 col-6 mx-auto">
-&nbsp;&nbsp;&nbsp;&nbsp;
-<br/>
-  <button className="btn btn-outline-secondary " type="button" value="Recuruitment"><Link to="Recup">Recuruitment</Link></button>
-  <button className="btn btn-outline-secondary" type="button"value="Appointment"><Link to="Reqapp">Appointment</Link></button>
-</div>
-       </div>
-    )
+  return (
+    <div
+    // style={{
+    //   backgroundImage:
+    //     "url(https://cache.careers360.mobi/media/presets/860X430/article_images/2021/1/8/NMAT-2020-Additional-Registration-Window.jpg)",
+    // }}
+    >
+      <div className="d-grid gap-2 col-6 mx-auto">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <button className="btn btn btn-info " type="button" value="SignUp">
+          <Link
+            // className={`nav-link ${
+            //   location.pathname === "/signup" ? "active" : ""
+            // }`}
+            to="/signup"
+          >
+            <i className="fas fa-user-plus"> Signup</i>
+          </Link>
+        </button>
+        <br />
+        <button
+          className="btn btn btn-info "
+          type="button"
+          value="Recuruitment"
+        >
+          <Link to="addnote">
+            {" "}
+            <i className="fas fa-user-plus"> Recruitment</i>
+          </Link>
+        </button>
+        <br />
+        <button className="btn btn btn-info" type="button" value="Appointment">
+          <Link to="addnote1">
+            {" "}
+            <i className="fas fa-user-plus"> Appointment</i>
+          </Link>
+        </button>
+        <br />
+      </div>
+    </div>
+  );
 }
 
 // var express = require('express');
@@ -29,7 +61,7 @@ export default function Admin() {
 //     dbConn.then(function(db) {
 //         delete req.body._id; // for safety reasons
 //         db.collection('feedbacks').insertOne(req.body);
-//     });    
+//     });
 //     res.send('Data received:\n' + JSON.stringify(req.body));
 // });
 
