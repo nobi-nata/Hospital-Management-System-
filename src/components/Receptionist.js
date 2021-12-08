@@ -15,7 +15,7 @@ const Receptionist = () => {
               // }`}
               to="/signup"
             >
-              <i className="fas fa-user-plus"> Patient Signup</i>
+              <i className="fas fa-user-plus"> Patient Registration</i>
             </Link>
           </button>
           {/* <br />

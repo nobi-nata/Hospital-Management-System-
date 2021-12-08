@@ -33,9 +33,9 @@ export default function Card() {
         </div>
         <div className="col-md-4">
           <CardItem
-            title="Patient"
-            link1="/"
-            desc="Quickheal Health maintains a full-service laboratory performing clinical analysis on blood, tissue and other body fluids."
+            title="Facilities"
+            link1="/fac"
+            desc="Many people don’t think twice about these facilities unless they need them. It’s good to know more about the facilities."
             link="https://cms.wellcome.org/sites/default/files/styles/image_full_mobile/public/iStock_UnderstandingPatientDataLaunchesToday_201704006_1200x1200.png?itok=J1i1YXVL"
           />
         </div>

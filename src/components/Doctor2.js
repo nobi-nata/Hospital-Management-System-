@@ -21,8 +21,8 @@ export default function Doctor2(props) {
           <a href="javascript:void(0)" className="closebtn" onClick={close}>
             ×
           </a>
-          <a href="/">Today's Appointment</a>
-          <a href="/">Future Appointment</a>
+          {/* <a href="/">Today's Appointment</a>
+          <a href="/">Future Appointment</a> */}
           <Link to="/admin-patient-login">Patient Registration</Link>
         </div>
         <button className="openbtn " onClick={open}>

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Footer() {
+export default function Footer(props) {
   var myStyle = {
     color: "white",
   };
@@ -9,14 +9,23 @@ export default function Footer() {
       <br />
       <div className="row">
         <div className="col-md-4">
-          <h4 style={myStyle}>QuickHeal</h4>
-          <p style={myStyle}>&nbsp;&nbsp;Get Well Soon Here</p>
+          <h4 style={myStyle}>
+            <strong>
+              <i class="fab fa-quinscape"></i>
+              {props.title}
+            </strong>
+          </h4>
+          <p style={myStyle}>
+            &nbsp;&nbsp;&nbsp;<strong>Get Well Soon Here</strong>
+          </p>
           <br />
           <br />
         </div>
 
         <div className="col-md-4">
-          <h4 style={myStyle}>Our Services</h4>
+          <h4 style={myStyle}>
+            <strong>Our Services</strong>
+          </h4>
           <dl>
             <li style={{ listStyle: "none" }}>
               <a style={{ textDecoration: "none" }} href="/">
@@ -42,7 +51,9 @@ export default function Footer() {
           <br />
         </div>
         <div className="col-md-4">
-          <h4 style={myStyle}>Follow Us</h4>
+          <h4 style={myStyle}>
+            <strong>Follow Us</strong>
+          </h4>
           <dl>
             <li style={{ listStyle: "none" }}>
               <a
@@ -82,7 +93,10 @@ export default function Footer() {
           })
         }
       >
-        &copy;Copyright 2021-22@wt.project
+        <strong style={{ color: "white" }}>
+          {" "}
+          &copy; Copyright 2021-22@wt.project
+        </strong>
       </div>
     </div>
   );

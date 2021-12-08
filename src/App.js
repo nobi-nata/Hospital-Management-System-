@@ -27,7 +27,8 @@ import AddNote from "./components/AddNote";
 import { useState } from "react";
 import Alert from "./components/Alert";
 import Receptionist from "./components/Receptionist";
-import Main from "./Main";
+import Main from "./components/Main";
+import Facilities from "./components/Facilities";
 function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
@@ -138,12 +139,16 @@ function App() {
             <Route path="/phar">
               <Pharmacy />
             </Route>
+            <Route path="/fac">
+              <Facilities />
+            </Route>
+
             <Route path="/">
               <Main />
             </Route>
           </Switch>
           <div style={{ backgroundColor: "black" }}>
-            <Footer />
+            <Footer title="  QuickHeal" />
           </div>
         </Router>
       </NoteState>

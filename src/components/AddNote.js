@@ -142,16 +142,7 @@ const AddNote = (props) => {
             <label htmlFor="tag" className="form-label">
               Department
             </label>
-            {/* <input
-            type="text"
-            className="form-control"
-            id="department"
-            name="department"
-            value={note.department}
-            onChange={onChange}
-            minLength={5}
-            required
-          /> */}
+
             <select
               className="form-select"
               placeholder="Categery"

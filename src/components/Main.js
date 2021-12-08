@@ -6,13 +6,13 @@ import Details from "./Details";
 const Main = () => {
   return (
     <div>
-      <div className="container mb-3 ">
+      <div className="container my-4 ">
         <Carausel1 />
       </div>
-      <div className="container" my-5>
+      <div className="container">
         <Details />
       </div>
-      <div className="container" my-3>
+      <div className="container">
         <Card />
       </div>
     </div>
