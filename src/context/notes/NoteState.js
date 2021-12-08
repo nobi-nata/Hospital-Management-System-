@@ -21,10 +21,12 @@ const NoteState = (props) => {
   };
   //add a note
   const addNote = async (
+    name,
     gender,
     age,
     phonenumber,
     address,
+    info,
     appdate,
     department
   ) => {
@@ -32,14 +34,15 @@ const NoteState = (props) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-
         "auth-token": localStorage.getItem("token"),
       },
       body: JSON.stringify({
+        name,
         gender,
         age,
         phonenumber,
         address,
+        info,
         appdate,
         department,
       }),
@@ -68,10 +71,12 @@ const NoteState = (props) => {
   //edit a note
   const editNote = async (
     id,
+    name,
     gender,
     age,
     phonenumber,
     address,
+    info,
     appdate,
     department
   ) => {
@@ -82,10 +87,12 @@ const NoteState = (props) => {
         "auth-token": localStorage.getItem("token"),
       },
       body: JSON.stringify({
+        name,
         gender,
         age,
         phonenumber,
         address,
+        info,
         appdate,
         department,
       }),
@@ -95,12 +102,16 @@ const NoteState = (props) => {
     for (let index = 0; index < notes.length; index++) {
       const element = newNotes[index];
       if (element._id === id) {
+        newNotes[index].name = name;
         newNotes[index].gender = gender;
         newNotes[index].age = age;
         newNotes[index].phonenumber = phonenumber;
         newNotes[index].address = address;
+        newNotes[index].info = info;
         newNotes[index].appdate = appdate;
         newNotes[index].department = department;
+        // newNotes[index].info = info;
+
         break;
       }
     }

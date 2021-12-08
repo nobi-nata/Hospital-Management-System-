@@ -6,7 +6,10 @@ const NotesSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "user",
   },
-
+  name: {
+    type: String,
+    required: true,
+  },
   gender: {
     type: String,
     required: true,
@@ -20,6 +23,10 @@ const NotesSchema = new Schema({
     required: true,
   },
   address: {
+    type: String,
+    required: true,
+  },
+  info: {
     type: String,
     required: true,
   },

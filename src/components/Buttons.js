@@ -15,51 +15,52 @@ export default function Buttons() {
           textAlign: "center",
           paddingTop: "10%",
           paddingBottom: "10%",
+
+          backgroundImage: "url(/syringe2.gif)",
         }}
       >
         {/* <img  src="https://sgmh.org/wp-content/uploads/2018/02/sgmh-emergency-services3000x2000-1260x840.jpeg" alt="..."/> */}
-        <button
-          type="button"
-          className="btn btn-outline-secondary my-3"
-          id="Admin "
-        >
-          <Link style={{ textDecoration: "none" }} to="login-admin">
+        <button type="button" className="btn btn-dark my-3" id="Admin ">
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            to="login-admin"
+          >
             Admin
           </Link>
         </button>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <button
-          type="button"
-          className="btn btn-outline-secondary"
-          id="Doctor "
-        >
-          <Link style={{ textDecoration: "none" }} to="login-doctor">
+        <button type="button" className="btn btn-dark" id="Doctor ">
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            to="login-doctor"
+          >
             Doctor
           </Link>
         </button>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <button type="button" className="btn btn-outline-secondary" id="Nurse ">
-          <Link style={{ textDecoration: "none" }} to="login-nurse">
+        <button type="button" className="btn btn-dark" id="Nurse ">
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            to="login-nurse"
+          >
             Nurse
           </Link>
         </button>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <button
-          type="button"
-          className="btn btn-outline-secondary"
-          id="Receptionist"
-        >
-          <Link style={{ textDecoration: "none" }} to="login-recep">
+        <button type="button" className="btn btn-dark" id="Receptionist">
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            to="login-recep"
+          >
             Receptionist
           </Link>
         </button>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <button
-          type="button"
-          className="btn btn-outline-secondary"
-          id="Patient"
-        >
-          <Link style={{ textDecoration: "none" }} to="login-patient">
+        <button type="button" className="btn btn-dark" id="Patient">
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            to="login-patient"
+          >
             Patient
           </Link>
         </button>

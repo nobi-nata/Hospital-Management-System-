@@ -6,6 +6,7 @@ export default function Signup(props) {
 
   const [credentials, setCredentials] = useState({
     name: "",
+    design: "",
     email: "",
     password: "",
     cpassword: "",
@@ -14,7 +15,7 @@ export default function Signup(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { name, email, password } = credentials;
+    const { name, design, email, password } = credentials;
     const response = await fetch("http://localhost:5000/api/auth/createuser", {
       method: "POST",
       headers: {
@@ -22,6 +23,7 @@ export default function Signup(props) {
       },
       body: JSON.stringify({
         name,
+        design,
         email,
         password,
       }),
@@ -48,6 +50,10 @@ export default function Signup(props) {
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
+        <div>
+          <h3>Registration</h3>
+        </div>
+        <br />
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
             Name
@@ -61,6 +67,7 @@ export default function Signup(props) {
             aria-describedby="emailHelp"
           />
         </div>
+
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
             Email address
@@ -73,9 +80,9 @@ export default function Signup(props) {
             onChange={onChange}
             aria-describedby="emailHelp"
           />
-          <div id="emailHelp" className="form-text">
+          {/* <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.
-          </div>
+          </div> */}
         </div>
         <div className="mb-3">
           <label htmlFor="password" className="form-label">
@@ -105,7 +112,7 @@ export default function Signup(props) {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary my-3">
           Submit
         </button>
       </form>

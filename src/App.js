@@ -2,10 +2,6 @@ import React from "react";
 // import logo from './logo.svg';
 import "./App.css";
 
-import Carausel from "./components/Carausel";
-// import Carausel1 from './components/Carausel1';
-import Card from "./components/Card";
-import Details from "./components/Details";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import {
@@ -28,11 +24,10 @@ import ScrollToTop from "./components/scrollToTop";
 import Buttons from "./components/Buttons";
 import Admin from "./components/Admin";
 import AddNote from "./components/AddNote";
-import AddNote1 from "./components/AddNote1";
-//import Login from "./components/Login (2)";
 import { useState } from "react";
 import Alert from "./components/Alert";
 import Receptionist from "./components/Receptionist";
+import Main from "./Main";
 function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
@@ -67,41 +62,75 @@ function App() {
             </Route>
 
             <Route path="/login-admin">
-              <Login name="Admin" showAlert={showAlert} />
+              <Login name="Admin" value="Admin Login" showAlert={showAlert} />
             </Route>
             <Route path="/login-doctor">
-              <Login name="Doctor" showAlert={showAlert} />
+              <Login name="Doctor" value="Doctor Login" showAlert={showAlert} />
             </Route>
             <Route path="/login-nurse">
-              <Login name="Nurse" showAlert={showAlert} />
+              <Login name="Nurse" value="Nurse Login" showAlert={showAlert} />
             </Route>
             <Route path="/login-recep">
-              <Login name="Receptionist" showAlert={showAlert} />
+              <Login
+                name="Receptionist"
+                value="Receptionist Login"
+                showAlert={showAlert}
+              />
             </Route>
             <Route path="/login-patient">
-              <Login name="Patient" showAlert={showAlert} />
+              <Login
+                name="Patient"
+                value="Patient Login"
+                showAlert={showAlert}
+              />
             </Route>
-
+            <Route path="/admin-doctor-login">
+              <Login
+                name="addnote"
+                value="Doctor Login"
+                showAlert={showAlert}
+              />
+            </Route>
+            <Route path="/admin-nurse-login">
+              <Login name="addnote" value="Nurse Login" showAlert={showAlert} />
+            </Route>
+            <Route path="/admin-recep-login">
+              <Login
+                name="addnote"
+                value="Receptionist Login"
+                showAlert={showAlert}
+              />
+            </Route>
+            <Route path="/admin-patient-login">
+              <Login
+                name="addnote-p"
+                value="Patient Login"
+                showAlert={showAlert}
+              />
+            </Route>
             <Route path="/Admin">
-              <Admin />
+              <Admin name="Admin" />
             </Route>
             <Route path="/Doctor">
-              <Doctor2 />
+              <Doctor2 name="Doctor" />
             </Route>
             <Route path="/Nurse">
-              <Nurse2 />
+              <Nurse2 name="Nurse" showAlert={showAlert} />
             </Route>
             <Route path="/Receptionist">
-              <Receptionist />
+              <Receptionist name="Receptionist" />
             </Route>
             <Route path="/addnote">
               <AddNote showAlert={showAlert} />
             </Route>
-            <Route path="/addnote1">
-              <AddNote1 showAlert={showAlert} />
+            <Route path="/addnote-p">
+              <AddNote value="Patient Login" showAlert={showAlert} />
             </Route>
+            {/* <Route path="/addnote1">
+              <AddNote1 showAlert={showAlert} />
+            </Route> */}
             <Route path="/Patient">
-              <Patient />
+              <Patient name="Patient" />
             </Route>
             <Route path="/lab">
               <Laboratory />
@@ -110,15 +139,7 @@ function App() {
               <Pharmacy />
             </Route>
             <Route path="/">
-              <div className="container" my-3>
-                <Carausel />
-              </div>
-              <div className="container" my-5>
-                <Details />
-              </div>
-              <div className="container" my-3>
-                <Card />
-              </div>
+              <Main />
             </Route>
           </Switch>
           <div style={{ backgroundColor: "black" }}>

@@ -1,10 +1,15 @@
 import React from "react";
 import Notes from "./Notes";
-
-const Patient = () => {
+// import logo from "../public/patient.gif";
+const Patient = (props) => {
   return (
-    <div>
-      <Notes />
+    <div className="row">
+      <div className="col">
+        <img src="/patient1.gif" alt="..." />
+      </div>
+      <div className="col">
+        <Notes name={props.name} />
+      </div>
     </div>
   );
 };

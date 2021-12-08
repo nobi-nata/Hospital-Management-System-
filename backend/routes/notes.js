@@ -23,17 +23,31 @@ router.post(
   "/addnote",
   fetchuser,
   [
+    body("name", "Enter name"),
     body("gender", "Select correct gender"),
     body("age", "Enter the valid age").isLength({ min: 1 }),
-    body("phonenumber", "Enter the valid phone number with 10 digits").isLength({ min: 10 }),
+    body("phonenumber", "Enter the valid phone number with 10 digits").isLength(
+      { min: 10 }
+    ),
     body("address", "Enter the valid address").isLength({ min: 5 }),
+    body("info", "Enter the valid Information"),
     body("appdate", "Enter the valid appointment date"),
-    body("department", "Description must be atleast 5 characters").isLength({min: 5}),
+    body("department", "Description must be atleast 5 characters").isLength({
+      min: 5,
+    }),
   ],
   async (req, res) => {
     try {
-      const { gender, age, phonenumber, address, appdate, department } =
-        req.body;
+      const {
+        name,
+        gender,
+        age,
+        phonenumber,
+        address,
+        info,
+        appdate,
+        department,
+      } = req.body;
       //if there are errors return bad request and the errors
 
       const errors = validationResult(req);
@@ -42,10 +56,12 @@ router.post(
       }
 
       const note = new Note({
+        name,
         gender,
         age,
         phonenumber,
         address,
+        info,
         appdate,
         department,
         user: req.user.id,
@@ -63,30 +79,36 @@ router.post(
 //Route3:  Updating an existing notes :PUT:"/api/notes/updatenote".  login required
 
 router.put("/updatenote/:id", fetchuser, async (req, res) => {
-  const { gender, age, phonenumber, address, appdate, department } = req.body;
+  const { name, gender, age, phonenumber, address, info, appdate, department } =
+    req.body;
   try {
     //Create a new note object
     const newNote = {};
-
+    if (name) {
+      newNote.name = name;
+    }
     if (gender) {
-      newNote.gender = gender
-    };
+      newNote.gender = gender;
+    }
     if (age) {
-      newNote.age = age
-    };
+      newNote.age = age;
+    }
     if (phonenumber) {
-      newNote.phonenumber = phonenumber
-    };
+      newNote.phonenumber = phonenumber;
+    }
     if (address) {
-      newNote.address = address
-    };
+      newNote.address = address;
+    }
+    if (info) {
+      newNote.info = info;
+    }
     if (appdate) {
-      newNote.appdate = appdate
-    };
+      newNote.appdate = appdate;
+    }
 
     if (department) {
-      newNote.department = department
-    };
+      newNote.department = department;
+    }
 
     //Find the note to be updated and update it
     let note = await Note.findById(req.params.id);
@@ -113,7 +135,7 @@ router.put("/updatenote/:id", fetchuser, async (req, res) => {
 
 router.delete("/deletenote/:id", fetchuser, async (req, res) => {
   try {
-    // const { gender, age, phonenumber, address, appdate, department } = req.body;
+    // const { gender, age, phonenumber, address, info, department } = req.body;
     // //Create a new note object
 
     //Find the note to be updated and update it

@@ -2,12 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 export default function Admin() {
   return (
-    <div
-    // style={{
-    //   backgroundImage:
-    //     "url(https://cache.careers360.mobi/media/presets/860X430/article_images/2021/1/8/NMAT-2020-Additional-Registration-Window.jpg)",
-    // }}
-    >
+    <div>
       <div className="d-grid gap-2 col-6 mx-auto">
         &nbsp;&nbsp;&nbsp;&nbsp;
         <br />
@@ -22,7 +17,44 @@ export default function Admin() {
           </Link>
         </button>
         <br />
-        <button
+        <div class="btn-group" role="group">
+          <button
+            id="btnGroupDrop1"
+            type="button"
+            className="btn btn-info dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <Link>
+              {" "}
+              <i className="fas fa-user-plus"> Recruitment</i>
+            </Link>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <li>
+              <a className="dropdown-item">
+                <Link to="/admin-doctor-login" name="Doctor ">
+                  <i className="fas fa-user-plus"> Doctor</i>
+                </Link>
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item">
+                <Link to="/admin-nurse-login" name="Nurse ">
+                  <i className="fas fa-user-plus"> Nurse</i>
+                </Link>
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item">
+                <Link to="/admin-recep-login" name="Receptionist ">
+                  <i className="fas fa-user-plus"> Receptionist</i>
+                </Link>
+              </a>
+            </li>
+          </ul>
+        </div>
+        {/* <button
           className="btn btn btn-info "
           type="button"
           value="Recuruitment"
@@ -31,12 +63,12 @@ export default function Admin() {
             {" "}
             <i className="fas fa-user-plus"> Recruitment</i>
           </Link>
-        </button>
+        </button> */}
         <br />
         <button className="btn btn btn-info" type="button" value="Appointment">
-          <Link to="addnote1">
+          <Link to="/admin-patient-login">
             {" "}
-            <i className="fas fa-user-plus"> Appointment</i>
+            <i className="fas fa-user-plus"> Patient Appointment</i>
           </Link>
         </button>
         <br />

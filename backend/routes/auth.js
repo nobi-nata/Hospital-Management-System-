@@ -12,6 +12,7 @@ router.post(
   "/createuser",
   [
     body("email", "Enter the valid Email").isEmail(),
+    body("design", "Enter the valid Designation").isLength({ min: 5 }),
     body("name", "Enter the valid Name").isLength({ min: 3 }),
     body("password", "Password should be of 5 characters").isLength({ min: 5 }),
   ],
@@ -40,6 +41,7 @@ router.post(
       //create a new user
       user = await User.create({
         name: req.body.name,
+        design: req.body.design,
         email: req.body.email,
         password: secPass,
       });
@@ -81,7 +83,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { email, password } = req.body;
+    const { email, design, password } = req.body;
     try {
       let user = await User.findOne({ email });
       if (!user) {

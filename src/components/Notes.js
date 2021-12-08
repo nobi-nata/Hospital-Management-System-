@@ -14,10 +14,12 @@ const Notes = (props) => {
   const refClose = useRef(null);
   const [note, setNote] = useState({
     id: "",
+    ename: "",
     egender: "",
     eage: "",
     ephonenumber: "",
     eaddress: "",
+    einfo: "",
     eappdate: "",
     edepartment: "",
   });
@@ -26,10 +28,12 @@ const Notes = (props) => {
     ref.current.click();
     setNote({
       id: currentNote._id,
+      ename: currentNote.name,
       egender: currentNote.gender,
       eage: currentNote.age,
       ephonenumber: currentNote.phonenumber,
       eaddress: currentNote.address,
+      einfo: currentNote.info,
       eappdate: currentNote.appdate,
       edepartment: currentNote.department,
     });
@@ -39,10 +43,12 @@ const Notes = (props) => {
   const handleClick = (e) => {
     editNote(
       note.id,
+      note.ename,
       note.egender,
       note.eage,
       note.ephonenumber,
       note.eaddress,
+      note.einfo,
       note.eappdate,
       note.edepartment
     );
@@ -146,21 +152,7 @@ const Notes = (props) => {
                     required
                   />
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="description" className="form-label">
-                    Appointment Date
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="eappdate"
-                    name="eappdate"
-                    value={note.eappdate}
-                    onChange={onChange}
-                    minLength={5}
-                    required
-                  />
-                </div>
+
                 <div className="mb-3">
                   <label htmlFor="description" className="form-label">
                     Department
@@ -174,6 +166,20 @@ const Notes = (props) => {
                     onChange={onChange}
                     minLength={5}
                     required
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="description" className="form-label">
+                    Description
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="einfo"
+                    name="einfo"
+                    value={note.einfo}
+                    onChange={onChange}
+                    minLength={5}
                   />
                 </div>
               </form>
@@ -200,15 +206,19 @@ const Notes = (props) => {
         </div>
       </div>
 
-      <div style={{ alignSelf: "flex-end" }} className="row my-3">
-        <h2>Details</h2>
+      <div className="row my-3">
         <div className="container mx-2">
           {notes.length === 0 && "No notes to display"}
         </div>
         <div>
           {notes.map((note) => {
             return (
-              <Noteitem key={note._id} updateNote={updateNote} note={note} />
+              <Noteitem
+                name={props.name}
+                key={note._id}
+                updateNote={updateNote}
+                note={note}
+              />
             );
           })}
         </div>
