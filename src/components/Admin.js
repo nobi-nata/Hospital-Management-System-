@@ -5,15 +5,11 @@ export default function Admin() {
     <div>
       <div className="d-grid gap-2 col-6 mx-auto">
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <br />
+        <br /> <br />
+        <h2 style={{ textAlign: "center" }}>Welcome to Admin page</h2>
         <button className="btn btn btn-info " type="button" value="SignUp">
-          <Link
-            // className={`nav-link ${
-            //   location.pathname === "/signup" ? "active" : ""
-            // }`}
-            to="/signup"
-          >
-            <i className="fas fa-user-plus"> Signup</i>
+          <Link to="/signup">
+            <i className="fas fa-user-plus"> Registration</i>
           </Link>
         </button>
         <br />
@@ -54,16 +50,6 @@ export default function Admin() {
             </li>
           </ul>
         </div>
-        {/* <button
-          className="btn btn btn-info "
-          type="button"
-          value="Recuruitment"
-        >
-          <Link to="addnote">
-            {" "}
-            <i className="fas fa-user-plus"> Recruitment</i>
-          </Link>
-        </button> */}
         <br />
         <button className="btn btn btn-info" type="button" value="Appointment">
           <Link to="/admin-patient-login">
@@ -71,38 +57,8 @@ export default function Admin() {
             <i className="fas fa-user-plus"> Patient Appointment</i>
           </Link>
         </button>
-        <br />
+        <br /> <br /> <br />
       </div>
     </div>
   );
 }
-
-// var express = require('express');
-// var path = require('path');
-// var bodyParser = require('body-parser');
-// var mongodb = require('mongodb');
-
-// var dbConn = mongodb.MongoClient.connect('mongodb://localhost:27017');
-
-// var app = express();
-
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(express.static(path.resolve(__dirname, 'public')));
-
-// app.post('/post-feedback', function (req, res) {
-//     dbConn.then(function(db) {
-//         delete req.body._id; // for safety reasons
-//         db.collection('feedbacks').insertOne(req.body);
-//     });
-//     res.send('Data received:\n' + JSON.stringify(req.body));
-// });
-
-// app.get('/view-feedbacks',  function(req, res) {
-//     dbConn.then(function(db) {
-//         db.collection('feedbacks').find({}).toArray().then(function(feedbacks) {
-//             res.status(200).json(feedbacks);
-//         });
-//     });
-// });
-
-// app.listen(process.env.PORT || 3000, process.env.IP || '0.0.0.0' );

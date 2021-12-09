@@ -8,7 +8,13 @@ export default function Buttons() {
 
   // }
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: "url(/syringe2.gif)",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "right",
+      }}
+    >
       <div
         className="container my-5 "
         style={{
@@ -17,6 +23,8 @@ export default function Buttons() {
           paddingBottom: "10%",
 
           backgroundImage: "url(/syringe2.gif)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "left",
         }}
       >
         {/* <img  src="https://sgmh.org/wp-content/uploads/2018/02/sgmh-emergency-services3000x2000-1260x840.jpeg" alt="..."/> */}
