@@ -1,5 +1,5 @@
 #phar-h1 {
-  text-decoration: overline brown;
+  text-align: center;
 }
 #phar-h3 {
   text-decoration: underline green;
@@ -9,10 +9,10 @@
   display: inline-block;
 }
 .pharcard-div1 {
-  padding-right: 12%;
+  padding-right: 18%;
 }
 .pharcard-div2 {
-  padding-right: 22%;
+  padding-right: 20%;
 }
 /* #dl-3 {
   padding-bottom: 30%;

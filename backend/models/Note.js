@@ -28,15 +28,15 @@ const NotesSchema = new Schema({
   },
   info: {
     type: String,
-    required: true,
+    // required: true,
   },
   appdate: {
     type: String,
-    required: true,
+    // required: true,
   },
   department: {
     type: String,
-    required: "General",
+    // required: "General",
   },
   date: {
     type: Date,

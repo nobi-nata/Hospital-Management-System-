@@ -53,7 +53,6 @@ export default function Admin() {
         <br />
         <button className="btn btn btn-info" type="button" value="Appointment">
           <Link to="/admin-patient-login">
-            {" "}
             <i className="fas fa-user-plus"> Patient Appointment</i>
           </Link>
         </button>

@@ -36,7 +36,10 @@ export default function Signup(props) {
       history.push("/Admin");
       props.showAlert("Account Created Successfully", "success");
     } else {
-      props.showAlert("Invalid Credentials", "danger");
+      props.showAlert(
+        "User already exist otherwise check password correctly!",
+        "danger"
+      );
     }
   };
 

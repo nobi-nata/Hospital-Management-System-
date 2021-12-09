@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import noteContext from "../context/notes/noteContext";
 
 const Noteitem = (props) => {
-  const context = useContext(noteContext);
-  const { deleteNote } = context;
-  const { note, updateNote } = props;
+  // const context = useContext(noteContext);
+  // const {} = context;
+  const { note } = props;
   return (
     <div className="col-md-3" style={{ paddingLeft: "30%", width: "100%" }}>
       <div className="card my-3">
@@ -40,7 +40,7 @@ const Noteitem = (props) => {
             <p className="card-text">Age : {note.age}</p>
             <p className="card-text">Phone Number : {note.phonenumber}</p>
             <p className="card-text">Address : {note.address}</p>
-            {props.name != "Patient" ? (
+            {props.name !== "Patient" ? (
               <p className="card-text">Department : {note.department}</p>
             ) : (
               <>

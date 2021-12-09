@@ -27,7 +27,6 @@ const AddNote = (props) => {
       note.info,
       note.appdate,
       note.department
-      // note.info
     );
     setNote({
       name: "",
@@ -137,7 +136,7 @@ const AddNote = (props) => {
             required
           />
         </div>
-        {props.value != "Patient Login" ? (
+        {props.value !== "Patient Login" ? (
           <div className="mb-3">
             <label htmlFor="tag" className="form-label">
               Department

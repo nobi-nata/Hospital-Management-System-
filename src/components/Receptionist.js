@@ -8,6 +8,8 @@ const Receptionist = () => {
         <div className="d-grid gap-2 col-6 mx-auto">
           &nbsp;&nbsp;&nbsp;&nbsp;
           <br />
+          <br />
+          <br />
           <button className="btn btn-info" type="button" value="SignUp">
             <Link
               // className={`nav-link ${
@@ -40,6 +42,8 @@ const Receptionist = () => {
               <i className="fas fa-user-plus"> Patient Appointment</i>
             </Link>
           </button>
+          <br />
+          <br />
           <br />
           <br />
         </div>

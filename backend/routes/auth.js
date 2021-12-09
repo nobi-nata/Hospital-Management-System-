@@ -12,7 +12,7 @@ router.post(
   "/createuser",
   [
     body("email", "Enter the valid Email").isEmail(),
-    body("design", "Enter the valid Designation").isLength({ min: 5 }),
+    // body("design", "Enter the valid Designation").isLength({ min: 5 }),
     body("name", "Enter the valid Name").isLength({ min: 3 }),
     body("password", "Password should be of 5 characters").isLength({ min: 5 }),
   ],

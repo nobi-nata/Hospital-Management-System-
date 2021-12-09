@@ -27,6 +27,7 @@ const Facilities = () => {
           <img
             style={{ height: "240px", width: "5px", borderRadius: "4%" }}
             className="col mx-5 ms-5"
+            alt="..."
             src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c3VyZ2VyeXxlbnwwfHwwfHw%3D&w=1000&q=80"
           />
         </div>
@@ -38,6 +39,7 @@ const Facilities = () => {
           <img
             style={{ height: "220px", width: "100px", borderRadius: "4%" }}
             className="col mx-5"
+            alt="..."
             src="https://ovumhospitals.com/wp-content/uploads/2019/11/hospital-ward-1338585_1920.jpg"
           />
           <div className="col mx-5">
@@ -87,6 +89,7 @@ const Facilities = () => {
           <img
             style={{ height: "250px", width: "100px", borderRadius: "4%" }}
             className="col mx-5"
+            alt="..."
             src="https://media.istockphoto.com/photos/patient-receiving-a-blood-transfusion-picture-id1266746953?k=20&m=1266746953&s=612x612&w=0&h=7zwX0pL745ZHvFKjUpL86kG35zI1LhP8mvK58Ml5M6c="
           />
         </div>
@@ -98,6 +101,7 @@ const Facilities = () => {
           <img
             style={{ height: "250px", width: "90px", borderRadius: "4%" }}
             className="col mx-5 ms-5"
+            alt="..."
             src="https://live.staticflickr.com/7560/15930417572_11162b4557_b.jpg"
           />{" "}
           <p className="col mx-3">

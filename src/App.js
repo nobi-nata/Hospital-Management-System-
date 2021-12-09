@@ -127,9 +127,7 @@ function App() {
             <Route path="/addnote-p">
               <AddNote value="Patient Login" showAlert={showAlert} />
             </Route>
-            {/* <Route path="/addnote1">
-              <AddNote1 showAlert={showAlert} />
-            </Route> */}
+
             <Route path="/Patient">
               <Patient name="Patient" />
             </Route>
