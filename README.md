@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# 3RD SEM WEB TECHNOLOGIES MINI PROJECT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple Hospital Management System website which is built using MERN Stack.
 
 ## Available Scripts
 
