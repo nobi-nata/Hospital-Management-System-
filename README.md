@@ -7,7 +7,7 @@ It makes registration for the patients and the hospital staff, makes appointment
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory src folder, you can run:
 
 ### `npm run both`
 
