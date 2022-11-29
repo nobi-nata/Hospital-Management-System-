@@ -15,3 +15,5 @@ Runs the app in the development mode and also the nodemon in the backend.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
+## IMPROVEMENTS NEEDED
+Further after login, the display of appropriate information and proper integration.
